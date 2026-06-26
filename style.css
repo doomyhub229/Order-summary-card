@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.container {
+    max-width: 450px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px hsla(245, 75%, 52%, 0.15);
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.text-container {
+    padding: 35px 48px 20px;
+    text-align: center;
+}
+
+.title {
+    color: hsl(223, 47%, 23%);
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    color: hsl(224, 23%, 55%);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.plan-box {
+    margin: 0 48px 32px;
+    padding: 20px;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan-box h5 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.plan-box p {
+    color: hsl(224, 23%, 55%);
+
+}
+
+.plan-box-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.proceed-btn,
+.cancel-btn {
+    color: hsl(224, 23%, 55%);
+    display: block;
+    margin-left: 48px;
+    margin-right: 48px;
+    text-align: center;
+}
+
+.proceed-btn {
+    padding: 15px;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.cancel-btn {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+
+a {
+    font-weight: 700;
+}
+
+.plan-box a:hover,
+.plan-box a:focus-visible {
+    color: hsl(245, 83%, 68%);
+    text-decoration: none;
+}
+
+.proceed-btn:hover,
+.proceed-btn:focus-visible {
+    background-color: hsl(245, 83%, 68%);
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus-visible {
+    color: hsl(223, 47%, 23%);
+}
+
+.plan-box a:focus-visible,
+.proceed-btn:focus-visible,
+.cancel-btn:focus-visible {
+    outline: 3px solid hsl(225, 100%, 94%);
+    outline-offset: 3px;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+
+    .container {
+        max-width: 87%;
+    }
+
+    .title {
+        font-size: 23px;
+    }
+
+    div.plan-box {
+        padding: 12px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .plan-box-left {
+        gap: 12px;
+    }
+
+    a.proceed-btn,
+    a.cancel-btn {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    a.proceed-btn,
+    a.cancel-btn,
+    .plan-box a,
+    .plan-box h5,
+    .plan-box p {
+        font-size: 13px;
+    }
+
+}
